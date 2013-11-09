@@ -8,10 +8,13 @@ LaunchHack::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  get "static_pages/home"
   get "static_pages/help"
 
+  root 'static_pages#home'
+
   post '/flights/search', to: 'flights#search'
+
+  get '/posts/new/:flights_id', to: 'posts#new'
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

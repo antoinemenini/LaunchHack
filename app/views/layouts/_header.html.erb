@@ -1,0 +1,11 @@
+<h1><%= link_to 'Home', "/" %></h1> 
+<span class="align-right">
+  <% if signed_in? %>
+    <%= link_to "My Profile", current_user, class: "link" %>
+    <%= link_to "Settings", edit_user_path(current_user), class: "link" %>
+    <%= link_to 'Sign out', signout_path, method: 'delete' %>
+  <% else %> 
+    <%= link_to ' Sign up', signup_path %>
+    <%= link_to 'Sign In', signin_path %>
+  <% end %>
+</span>

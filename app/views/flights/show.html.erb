@@ -36,14 +36,24 @@
       <% end %>
     <% end %>
  <% else %>
- <p>
-  Test 
- </p>   
+ <% if @flight.posts.any? %>
+ <% total = 0 %>
+      <% @flight.posts.each do |post| %>
+            <% total += post.weight %>
+      <% end %>
+      <%= total %>
+    <% end %> 
 <% end %>
 
+<p>
+<%= link_to "Add post", controller: "posts", action: "new", flight_id: @flight.id%>
+</p>
 
-
-
+<% if signed_in? %>
+<%= link_to 'Sign Out', signout_path, method: 'delete' %>
+<% else %>
+<% end %>
+</p>
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
