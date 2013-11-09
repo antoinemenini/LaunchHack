@@ -1,4 +1,6 @@
 LaunchHack::Application.routes.draw do
+  post '/flights/search', to: 'flights#search'
+  
   resources :flights
 
   resources :users

@@ -1,5 +1,8 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
+  
+  # this is to avoid the authenticity token when doing AJAX. We have to find a better way...
+  skip_before_filter :verify_authenticity_token
 
   # GET /flights
   # GET /flights.json
@@ -16,9 +19,21 @@ class FlightsController < ApplicationController
   def new
     @flight = Flight.new
   end
-
+    
   # GET /flights/1/edit
   def edit
+  end
+
+  # POST /flights/search
+  def search
+    @flights = Flight.all
+    @flights = @flights.where("airline like ?", "%#{params[:airline]}%") unless params[:airline].blank?
+    @flights = @flights.where("flightnumber like ?", "%#{params[:flightnumber]}%") unless params[:flightnumber].blank?
+    @flights = @flights.where("departureairport like ?", "%#{params[:departureairport]}%") unless params[:departureairport].blank?
+    @flights = @flights.where("arrivalairport like ?", "%#{params[:arrivalairport]}%") unless params[:arrivalairport].blank?
+
+
+    render json: @flights
   end
 
   # POST /flights
@@ -71,4 +86,5 @@ class FlightsController < ApplicationController
     def flight_params
       params.require(:flight).permit(:airline, :departuretime, :flightnumber, :departureairport, :arrivalairport)
     end
+
 end
