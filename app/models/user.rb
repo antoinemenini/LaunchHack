@@ -21,7 +21,20 @@ class User < ActiveRecord::Base
 	validates :name, :phone, :password, presence: true
 	
 	validates :email, presence: true
+  before_create :create_auth_token
                    
+  def User.new_auth_token
+    SecureRandom.urlsafe_base64
+  end
 
+  def User.encrypt(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  private
+
+  def create_auth_token
+    self.auth_token = User.encrypt(User.new_auth_token)
+  end
 
 end

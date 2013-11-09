@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109084456) do
+ActiveRecord::Schema.define(version: 20131109095100) do
 
   create_table "flights", force: true do |t|
     t.string   "airline"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20131109084456) do
     t.datetime "updated_at"
     t.string   "password"
     t.string   "password_digest"
+    t.string   "auth_token"
   end
 
 end
