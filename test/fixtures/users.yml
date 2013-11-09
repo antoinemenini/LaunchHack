@@ -2,13 +2,14 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  phone      :integer
-#  created_at :datetime
-#  updated_at :datetime
-#  password   :string(255)
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  email           :string(255)
+#  phone           :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  password        :string(255)
+#  password_digest :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
