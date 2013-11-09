@@ -9,18 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require style.css.less
  */
-
-#header{
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  height: 70px;
-  background-color: #308992;
-}
-
-#header .align-right{
-	float: right;
-}
-

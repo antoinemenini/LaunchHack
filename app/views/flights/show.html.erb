@@ -1,29 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="box">
+  <h4>
+    <%= @flight.airline %> # <%= @flight.flightnumber %>
+  </h4>
+  <p>
+    <strong>Departure Time:</strong>
+    <%= @flight.departuretime %>
+  </p>
 
-<p>
-  <strong>Airline:</strong>
-  <%= @flight.airline %>
-</p>
+  <div class="travel">
+    <p>
+    <strong>From:</strong>
+    <%= @flight.departureairport %>
+    <strong>To:</strong>
+    <%= @flight.arrivalairport %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>Departuretime:</strong>
-  <%= @flight.departuretime %>
-</p>
-
-<p>
-  <strong>Flightnumber:</strong>
-  <%= @flight.flightnumber %>
-</p>
-
-<p>
-  <strong>Departureairport:</strong>
-  <%= @flight.departureairport %>
-</p>
-
-<p>
-  <strong>Arrivalairport:</strong>
-  <%= @flight.arrivalairport %>
-</p>
 <% if signed_in? %>
   <% if @flight.posts.any? %>
       <% @flight.posts.each do |post| %>
