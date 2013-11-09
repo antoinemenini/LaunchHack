@@ -1,4 +1,5 @@
 LaunchHack::Application.routes.draw do
+
   resources :posts
 
   resources :flights
@@ -9,6 +10,8 @@ LaunchHack::Application.routes.draw do
 
   get "static_pages/home"
   get "static_pages/help"
+
+  post '/flights/search', to: 'flights#search'
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
