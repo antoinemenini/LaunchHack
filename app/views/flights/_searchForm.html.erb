@@ -1,0 +1,22 @@
+<%= form_tag do %>
+  <div class="field">
+    <%= label_tag :airline, "Airline:" %><br>
+    <%= text_field_tag :airline, nil, :class => "tracked" %>
+  </div>
+  <div class="field">
+    <%= label_tag(:departuretime, "Departure time:") %><br>
+    <%= select_datetime(Date.today, prefix: :departuretime) %>
+  </div>
+  <div class="field">
+    <%= label_tag :flightnumber, "Flight number:" %><br>
+    <%= text_field_tag :flightnumber, nil, :class => "tracked" %>
+  </div>
+  <div class="field">
+    <%= label_tag :departureairport, "Departure airport:" %><br>
+    <%= text_field_tag :departureairport, nil, :class => "tracked"  %>
+  </div>
+  <div class="field">
+    <%= label_tag :arrivalairport, "Arrival airport:" %><br>
+    <%= text_field_tag :arrivalairport, nil, :class => "tracked"  %>
+  </div>
+<% end %>
