@@ -25,5 +25,16 @@
   <%= @flight.arrivalairport %>
 </p>
 
+<% if @flight.posts.any? %>
+    <% @flight.posts.each do |post| %>
+          <h4><%= post.user_id %>
+          </h4>
+          <p>
+          <%= post.description %>
+          <%= post.weight %> Kg
+          </p>
+    <% end %>
+  <% end %>
+
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>

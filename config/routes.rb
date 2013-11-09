@@ -1,4 +1,6 @@
 LaunchHack::Application.routes.draw do
+  resources :posts
+
   resources :flights
 
   resources :users

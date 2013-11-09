@@ -13,4 +13,7 @@
 #
 
 class Flight < ActiveRecord::Base
+	validates :airline, presence: true
+	validates :departuretime, presence: true
+	has_many :posts
 end
