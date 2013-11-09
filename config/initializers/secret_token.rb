@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-LaunchHack::Application.config.secret_key_base = 'cb3fc809f7e6b919e0b8be48d5821a3206d4c3150ab891cecc6d27dcc81fa800d94ff1b6553b189a82c91453350b5b09e845fe644c123cf9e828935c8e9bf5c9'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+LaunchHack::Application.config.secret_key_base = secure_token
