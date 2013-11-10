@@ -16,6 +16,9 @@ LaunchHack::Application.routes.draw do
 
   get '/posts/new/:flights_id', to: 'posts#new'
 
+  get '/users/contact/:user_contacted', to: 'users#contact'
+  post '/users/contact', to: 'users#send_message'
+
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'

@@ -62,6 +62,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def contact
+    @user_contacted = User.find(params[:user_contacted])
+  end
+
+  def send_message
+    @user_contacted = User.find(params[:user_contacted])
+    UserMailer.send_message(current_user, @user_contacted, params[:message]).deliver
+    flash[:success] = "Your message has been sent to #{@user_contacted}."
+    redirect_to root_url()
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
