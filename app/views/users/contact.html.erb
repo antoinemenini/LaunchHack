@@ -1,15 +1,17 @@
-<% user_contacted = User.find(@user_contacted) %>
+<div class="content">
+	<% user_contacted = User.find(@user_contacted) %>
 <h1>Send a message to <%= user_contacted.name %></h1>
-	<%= @user_contacted.id %>
-
 	
 
 	<%= hidden_field_tag :user_contacted, :value => @user_contacted.id %>
 
-    <p>Your email address: <%= current_user.email %></p>
+    <p>We will send it through your email <%= current_user.email %></p>
 
     <%= label_tag :message, "Your message to #{@user}:" %><br>
     <%= text_area_tag :message %>
+    <br>
     <small>We will deliver your message in <%= user_contacted.name %>'s email box. He will answer on yours</small><br>
 
-    <%= link_to "Send", root_url(), :confirm => "Are you sure?" %>
+    <%= link_to raw('<i class="fa fa-envelope-o"></i> Send'), root_url(), :confirm => "Are you sure?" , class: "btn btn-blue"%>
+
+</div>

@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <%=  @flight.id %>
+  
 
   <%= f.hidden_field :flight_id, :value => @flight.id %>
 
@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :weight %><br>
-    <%= f.number_field :weight %>
+    <%= f.number_field :weight %> Kg
   </div>
   <div class="actions">
     <%= f.submit %>
