@@ -5,14 +5,14 @@
   </div>
   <div class="field">
     <%= label_tag :departuretime, "Departure Time:" %><br>
-    <%= text_field_tag :departuretime, nil, :id => "datepicker" %>
+    <%= text_field_tag :departuretime, nil, :id => "date_picker" %>
   </div>
- <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
+ 
+  <script type="text/javascript">
+                $(function(){
+                        $('#date_picker').datetimepicker();
+                });
   </script>
-
 
   <div class="field">
     <%= label_tag :flightnumber, "Flight number:" %><br>

@@ -1,9 +1,46 @@
 <div id="row1">
   <div class="wrapper">
-    <h1>Travel with luggage for cheap.</h1>
+    <h1>Who said having excess baggage was expensive?</h1>
     <div class="center-wrap">
       <%= link_to raw('<i class="fa fa-plane"></i> Find Flight'), flights_path,  class: "btn-big btn-orange"%>
     </div>
   </div>
+</div>
+<div id="row2">
+	<div class="content">
+	<div class="column3 ID">
+      <%= image_tag("pureholidayhomes.jpg") %>
+      <h2>ID Verified</h2>
+      <h2 class="details">
+      	Thanks to our partner, we verify the identity of every member
+      </h2>
+    </div>
+    <div class="column3 Reviews">
+      <%= image_tag("ss-reviews.jpg") %>
+      <h2>Reviews</h2>
+      <h2 class="details">
+      	Write reviews about other users and bring trust to the community
+      </h2>
+    </div>
+    <div class="column3 Trust">
+      <%= image_tag("connectTrust.jpg") %>
+      <h2>Trust</h2>
+      <h2 class="details">
+      	Discuss with poster before taking the leap of faith
+      </h2>
+    </div>
+</div>
 
+<script type="text/javascript">
+                $(document).ready(function(){
+                        $('#row2').on('mouseenter', '.column3', function(){
+                        	$(this).css({"background-color": "#ffa400", "height":"335px"});
+                        	$(this).find(".details").css({"visibility":"visible"});
+                        });
+                        $('#row2').on('mouseleave', '.column3', function(){
+                        	$(this).css({"background-color": "#fbbf54", "height":"265px"});
+                        	$(this).find(".details").css({"visibility":"hidden"});
+                        });
+                });
+  </script>
 </div>

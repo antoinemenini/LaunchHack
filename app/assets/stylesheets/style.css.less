@@ -10,16 +10,17 @@
 @darkOrange: #C43017;
 @lightOrange: #FF4C00;
 
-.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
-.ui-timepicker-div dl { text-align: left; }
-.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
-.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
-.ui-timepicker-div td { font-size: 90%; }
-.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; border-color: #014B79; }
+.ui-timepicker-div dl { text-align: left; border-color: #014B79; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; border-color: #014B79;}
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; border-color: #014B79;}
+.ui-timepicker-div td { font-size: 90%; border-color: #014B79;}
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; border-color: #014B79;}
 
-.ui-timepicker-rtl{ direction: rtl; }
-.ui-timepicker-rtl dl { text-align: right; }
-.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+.ui-timepicker-rtl{ direction: rtl; border-color: #014B79;}
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; border-color: #014B79;}
+.ui-timepicker-rtl dl dt{ float: right; clear: right; border-color: #014B79;}
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; border-color: #014B79;}
 
 .box{
   text-align: center;
@@ -52,4 +53,38 @@
 }
 }
 
+#row2{
+    background-color: #fff;
+    height: 400px;
+  .column3{
+    text-align: center;
+    background-color: #fbbf54;
+    width: 280px;
+    height: 265px;
+    margin: auto;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-left: 10px;
+  padding-top: -10px;
+  -moz-box-shadow: 0px 0px 10px #000000;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #000000;
+
+    img{
+      display: block;
+      margin:  auto;
+      height: 200px;
+      width: 280px;
+}
+    .details{
+    visibility:hidden;
+    font-size: 16px;
+    margin-top: 0px;
+    }
+}
+}
 

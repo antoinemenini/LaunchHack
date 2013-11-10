@@ -9,10 +9,10 @@
     <thead>
       <tr>
         <th>Airline</th>
-        <th>Departuretime</th>
-        <th>Flightnumber</th>
-        <th>Departureairport</th>
-        <th>Arrivalairport</th>
+        <th>     Departure Time    </th>
+        <th>        Flight #      </th>
+        <th>         From        </th>
+        <th>To</th>
         <th></th>
         <th></th>
         <th></th>
@@ -27,9 +27,7 @@
           <td><%= flight.flightnumber %></td>
           <td><%= flight.departureairport %></td>
           <td><%= flight.arrivalairport %></td>
-          <td><%= link_to 'Show', flight %></td>
-          <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
-          <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'See Posts', flight %></td>
         </tr>
       <% end %>
     </tbody>

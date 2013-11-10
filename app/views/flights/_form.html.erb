@@ -16,9 +16,15 @@
     <%= f.text_field :airline %>
   </div>
   <div class="field">
-    <%= f.label :departuretime %><br>
-    <%= f.datetime_select :departuretime %>
+    <%= f.label :departuretime, "Departure Time:" %><br>
+    <%= f.text_field :departuretime, :id => "date_picker" %>
   </div>
+  <script type="text/javascript">
+                $(function(){
+                        $('#date_picker').datetimepicker();
+                });
+  </script>
+  
   <div class="field">
     <%= f.label :flightnumber %><br>
     <%= f.text_field :flightnumber %>
