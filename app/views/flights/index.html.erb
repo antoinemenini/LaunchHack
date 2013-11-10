@@ -1,9 +1,14 @@
-<div class="content">
+
+  <div id ="planeform">
   <%= render 'searchForm' %>
+</div>
 
+<div id= 'linknew'>
+  <%= link_to 'Can t find your flight?', new_flight_path, class: "btn-other" %>
+</div>
 
-
-  <h1>Listing flights</h1>
+<div class="result">
+  <h1>Results</h1>
 
   <table>
     <thead>
@@ -13,8 +18,6 @@
         <th>        Flight #      </th>
         <th>         From        </th>
         <th>To</th>
-        <th></th>
-        <th></th>
         <th></th>
       </tr>
     </thead>
@@ -34,6 +37,4 @@
   </table>
 
   <br>
-
-  <%= link_to 'New Flight', new_flight_path %>
 </div>

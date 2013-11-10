@@ -1,3 +1,7 @@
+<div class="fondblanc">
+
+  <h2> Find your flight </h2>
+  
 <%= form_tag(nil, {:class => 'form'}) do %>
   <div class="field">
     <%= label_tag :airline, "Airline:" %><br>
@@ -15,15 +19,16 @@
   </script>
 
   <div class="field">
-    <%= label_tag :flightnumber, "Flight number:" %><br>
+    <%= label_tag :flightnumber, "Flight #:" %><br>
     <%= text_field_tag :flightnumber, nil, :class => "tracked" %>
   </div>
   <div class="field">
-    <%= label_tag :departureairport, "Departure airport:" %><br>
+    <%= label_tag :departureairport, "From:" %><br>
     <%= text_field_tag :departureairport, nil, :class => "tracked"  %>
   </div>
   <div class="field">
-    <%= label_tag :arrivalairport, "Arrival airport:" %><br>
+    <%= label_tag :arrivalairport, "To:" %><br>
     <%= text_field_tag :arrivalairport, nil, :class => "tracked"  %>
   </div>
 <% end %>
+</div>
