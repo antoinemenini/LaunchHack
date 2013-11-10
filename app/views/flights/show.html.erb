@@ -21,33 +21,44 @@
 <% if signed_in? %>
   <% if @flight.posts.any? %>
       <% @flight.posts.each do |post| %>
-            <h4><%= post.user_id %>
+      <% @user = User.find(post.user_id) %>
+            <h4><%= @user.name %>
             </h4>
             <p>
             <%= post.description %>
             <%= post.weight %> Kg
             </p>
+            <%= id = @user.id %> 
+            <%= link_to raw('Contact'), controller: 'users', action: "contact", user_contacted: @user %>
+
       <% end %>
     <% end %>
  <% else %>
  <% if @flight.posts.any? %>
- <% total = 0 %>
+ <% total = 0 
+ number =0 %>
       <% @flight.posts.each do |post| %>
-            <% total += post.weight %>
+            <% total += post.weight 
+            number += 1 %>
       <% end %>
-      <%= total %>
+
+<p> Currently <%= number %> users offer to carry luggages for that flight.</p>
+<p> The total weight those users can carry is <%= total %> kg. </p>
+
+<p> To see the details and contact one of those users, <%= link_to 'Sign In', signin_path %> or <%= link_to 'Sign Up', signup_path %>
+  </p>
+
     <% end %> 
 <% end %>
 
+<% if signed_in? %>
 <p>
-<%= link_to "Add post", controller: "posts", action: "new", flight_id: @flight.id%>
+  You can also offer your services, just
+<%= link_to "add a post", controller: "posts", action: "new", flight_id: @flight.id%>
 </p>
 
-<% if signed_in? %>
-<%= link_to 'Sign Out', signout_path, method: 'delete' %>
 <% else %>
 <% end %>
 </p>
 
-<%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
