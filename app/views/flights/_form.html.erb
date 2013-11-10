@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+
 <div class="fondblanc">
   <div class="field">
     <%= f.label :airline %><br>
@@ -26,15 +27,15 @@
   </script>
   
   <div class="field">
-    <%= f.label :flightnumber %><br>
+    <%= f.label :flightnumber, "Flight #:" %><br>
     <%= f.text_field :flightnumber %>
   </div>
   <div class="field">
-    <%= f.label :departureairport %><br>
+    <%= f.label :departureairport, "From:" %><br>
     <%= f.text_field :departureairport %>
   </div>
   <div class="field">
-    <%= f.label :arrivalairport %><br>
+    <%= f.label :arrivalairport, "To:" %><br>
     <%= f.text_field :arrivalairport %>
   </div>
   <div class="actions">
