@@ -1,10 +1,8 @@
 <div class="content">
-  <p id="notice"><%= notice %></p>
 
-  <p>
-  <strong>Name:</strong>
+  <h2>
   <%= @user.name %>
-  </p>
+  </h2>
 
   <p>
   <strong>Email:</strong>
@@ -16,11 +14,7 @@
   <%= @user.phone %>
   </p>
 
-  <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-  </p>
 
-  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Edit your profile', edit_user_path(@user) %> |
   <%= link_to 'Back', users_path %>
 </div>

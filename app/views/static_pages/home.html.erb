@@ -1,6 +1,6 @@
 <div id="row1">
   <div class="wrapper">
-    <h1>Who said having excess baggage was expensive?</h1>
+    <h1>Who said having too much luggage was expensive?</h1>
     <div class="center-wrap">
       <%= link_to raw('<i class="fa fa-plane"></i> Find Flight'), flights_path,  class: "btn-big btn-orange"%>
     </div>
@@ -10,7 +10,7 @@
 	<div class="content">
 	<div class="column3 ID">
       <%= image_tag("pureholidayhomes.jpg") %>
-      <h2>ID Verified</h2>
+      <h2>Verified ID</h2>
       <h2 class="details">
       	Thanks to our partner, we verify the identity of every member
       </h2>
@@ -39,6 +39,7 @@
                         });
                         $('#row2').on('mouseleave', '.column3', function(){
                         	$(this).css({"background-color": "#fbbf54", "height":"265px"});
+                        	$(this).find(".details").slideDown();
                         	$(this).find(".details").css({"visibility":"hidden"});
                         });
                 });

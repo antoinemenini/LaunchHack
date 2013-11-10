@@ -1,4 +1,6 @@
-<%= form_for(@flight, html:{class: "form"}) do |f| %>
+<div class="fondblanc2">
+
+  <%= form_for(@flight, html:{class: "form"}) do |f| %>
   <% if @flight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
@@ -11,7 +13,9 @@
     </div>
   <% end %>
 
-<div class="fondblanc">
+
+  <h2> New flight </h2>
+
   <div class="field">
     <%= f.label :airline %><br>
     <%= f.text_field :airline, class: "typeahead" %>
@@ -38,7 +42,7 @@
     <%= f.label :arrivalairport, "To:" %><br>
     <%= f.text_field :arrivalairport %>
   </div>
-  <div class="actions">
+  <div class="action">
     <%= f.submit %>
   </div>
 <% end %>

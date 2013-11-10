@@ -1,11 +1,6 @@
 
   <div id ="planeform">
   <%= render 'searchForm' %>
-</div>
-
-<div id= 'linknew'>
-  <%= link_to 'Can t find your flight?', new_flight_path, class: "btn-other" %>
-</div>
 
 <div class="result">
   <h1>Results</h1>
@@ -30,11 +25,15 @@
           <td><%= flight.flightnumber %></td>
           <td><%= flight.departureairport %></td>
           <td><%= flight.arrivalairport %></td>
-          <td><%= link_to 'See Posts', flight %></td>
+          <td><%= link_to raw('<i class="fa fa-search-plus"></i> Show posts'), flight, class: "btn btn-table" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
   <br>
+</div>
+<div id= 'linknew'>
+  <%= link_to raw('<i class="fa fa-plane"></i> Can t find your plane?'), new_flight_path, class: "btn btn-blue" %>
+</div>
 </div>
