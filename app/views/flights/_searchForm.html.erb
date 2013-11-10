@@ -4,9 +4,16 @@
     <%= text_field_tag :airline, nil, :class => "tracked" %>
   </div>
   <div class="field">
-    <%= label_tag(:departuretime, "Departure time:") %><br>
-    <%= select_datetime(Date.today, prefix: :departuretime) %>
+    <%= label_tag :departuretime, "Departure Time:" %><br>
+    <%= text_field_tag :departuretime, nil, :id => "datepicker" %>
   </div>
+ <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+
+
   <div class="field">
     <%= label_tag :flightnumber, "Flight number:" %><br>
     <%= text_field_tag :flightnumber, nil, :class => "tracked" %>
