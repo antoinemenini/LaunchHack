@@ -7,42 +7,43 @@
     <span class="airportCode">
       <%= @flight.arrivalairport %>
     </span>
-    
+
     <span  class="spanTable"> 
-    <table>
-      <tr>
-        <td colspan="2">
-          <%= @flight.airline %> <%= @flight.flightnumber %>
-        </td>
-      </tr>
-      <tr>
-        <td><i class="fa fa-calendar"></i></td>
-        <td>
-          <%= @flight.departuretime.strftime("%m/%d/%Y") %>
-        </td>
-      </tr>
-      <tr>
-        <td><i class="fa fa-clock-o"></i></td>
-        <td>
-          <%= @flight.departuretime.to_s(:time) %>
-        </td>
-      </tr>
-    </table>
-  </span>
+      <table>
+        <tr>
+          <td colspan="2">
+            <%= @flight.airline %> <%= @flight.flightnumber %>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-calendar"></i></td>
+          <td>
+            <%= @flight.departuretime.strftime("%m/%d/%Y") %>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-clock-o"></i></td>
+          <td>
+            <%= @flight.departuretime.to_s(:time) %>
+          </td>
+        </tr>
+      </table>
+    </span>
   </div>
 
   <% if signed_in? %>
     <% if @flight.posts.any? %>
       <% @flight.posts.each do |post| %>
         <% @user = User.find(post.user_id) %>
-        <h4><%= @user.name %>
-        </h4>
-        <p>
-        <%= post.description %>
-        <%= post.weight %> Kg
-        </p>
-        <%= id = @user.id %> 
-        <%= link_to raw('Contact'), controller: 'users', action: "contact", user_contacted: @user %>
+
+        <div class="post">
+          <span class="weight"><%= post.weight %> Kg</span>
+          <h4><i class="fa fa-briefcase"></i> <%= @user.name %></h4>
+          <p>
+          <%= post.description %>
+          </p>
+          <%= link_to raw('<i class="fa fa-envelope"></i> Contact'), {controller: 'users', action: "contact", user_contacted: @user}, class: "btn btn-orange"%>
+        </div>
 
       <% end %>
     <% end %>

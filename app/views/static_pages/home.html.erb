@@ -7,30 +7,37 @@
   </div>
 </div>
 <div id="row2">
-	<div class="content">
-	<div class="column3 ID">
+  <div class="content">
+    <div class="column3 ID">
       <%= image_tag("pureholidayhomes.jpg") %>
       <h2>Verified ID</h2>
+<<<<<<< HEAD
       <h2 class="details">
       	Thanks to our partner, we verify the identity of every member
       </h2>
+=======
+      <div class="details">
+        Thanks to our partner, we verify the identity of every member.
+      </div>
+>>>>>>> b9bc0fbf716ba34922d4eb49a213760cf04fb74d
     </div>
     <div class="column3 Reviews">
       <%= image_tag("ss-reviews.jpg") %>
       <h2>Reviews</h2>
-      <h2 class="details">
-      	Write reviews about other users and bring trust to the community
-      </h2>
+      <div class="details">
+        Write reviews about other users and bring trust to the community.
+      </div>
     </div>
     <div class="column3 Trust">
       <%= image_tag("connectTrust.jpg") %>
       <h2>Trust</h2>
-      <h2 class="details">
-      	Discuss with poster before taking the leap of faith
-      </h2>
+      <div class="details">
+        Discuss with poster before taking the leap of faith.
+      </div>
     </div>
-</div>
+  </div>
 
+<<<<<<< HEAD
 <script type="text/javascript">
                 $(document).ready(function(){
                         $('#row2').on('mouseenter', '.column3', function(){
@@ -44,4 +51,18 @@
                         });
                 });
   </script>
+=======
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#row2').on('mouseenter', '.column3', function(){
+          $(this).css({"background-color": "#ffa400"});
+          $(this).find(".details").slideDown(500);
+          });
+        $('#row2').on('mouseleave', '.column3', function(){
+          $(this).css({"background-color": "#fbbf54"});
+          $(this).find(".details").hide(300);
+          });
+        });
+</script>
+>>>>>>> b9bc0fbf716ba34922d4eb49a213760cf04fb74d
 </div>

@@ -30,37 +30,42 @@
 
 
 #row2{
-    background-color: #fff;
-    height: 400px;
+  background-color: #fff;
+  height: 400px;
   .column3{
     text-align: center;
     background-color: #fbbf54;
     width: 280px;
-    height: 265px;
+    //height: 265px;
     margin: auto;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  margin-left: 10px;
-  padding-top: -10px;
-  -moz-box-shadow: 0px 0px 10px #000000;
-  -webkit-box-shadow: 0px 0px 10px #000000;
-  box-shadow: 0px 0px 10px #000000;
-
-    img{
-      display: block;
-      margin:  auto;
-      height: 200px;
-      width: 280px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-left: 10px;
+    padding-top: -10px;
+    -moz-box-shadow: 0px 0px 10px #000000;
+    -webkit-box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 10px #000000;
+    vertical-align: top;
+    h2{
+      margin: 10px;
 }
-    .details{
-    visibility:hidden;
-    font-size: 16px;
-    margin-top: 0px;
-    }
+
+img{
+  display: block;
+  margin:  auto;
+  height: 200px;
+  width: 280px;
+}
+.details{
+  display: none;
+  font-size: 16px;
+  margin-top: 0px;
+  padding: 0 15px 15px 15px;
+  }
 }
 }
 
@@ -96,6 +101,7 @@
   height: auto;
   width: 100%;
   padding: 15px;
+<<<<<<< HEAD
 
   .fondblanc2{
   width: 495px;
@@ -103,6 +109,19 @@
     padding: 0px;
     background-color: #fff;
     -moz-box-shadow: 0px 0px 10px #000000;
+=======
+  h1{
+    text-align: center;
+    font-family: WisdomScript;
+    font-size: 35px;
+}
+.fondblanc{
+  width: 600px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff;
+  -moz-box-shadow: 0px 0px 10px #000000;
+>>>>>>> b9bc0fbf716ba34922d4eb49a213760cf04fb74d
   -webkit-box-shadow: 0px 0px 10px #000000;
   box-shadow: 0px 0px 10px #000000;
   h2{
@@ -118,9 +137,14 @@
 }
 
 .result{
+<<<<<<< HEAD
 float:right;
    width: 700px;
   margin: 10px auto;
+=======
+  width: 940px;
+  margin: 0 auto;
+>>>>>>> b9bc0fbf716ba34922d4eb49a213760cf04fb74d
   padding-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
@@ -129,6 +153,7 @@ float:right;
   -webkit-box-shadow: 0px 0px 10px #000000;
   box-shadow: 0px 0px 10px #000000;
   h1{
+<<<<<<< HEAD
   margin-top:0px;
   padding-top: 10px;
   margin-bottom:0px;
@@ -138,6 +163,13 @@ float:right;
   font-size: 40px;
   }
   table{
+=======
+    text-align: center;
+    font-family: WisdomScript;
+    font-size: 50px;
+}
+table{
+>>>>>>> b9bc0fbf716ba34922d4eb49a213760cf04fb74d
   border:1px solid #9f9b90;
   padding:3px 7px 2px 7px;
   width:100%;
@@ -145,15 +177,15 @@ float:right;
   padding: 15px;
 
   thead{
-  padding:7px 7px 7px 7px;
-  background-color: #9f9b90;
-  color:white;
-  width: 50px;
-  }
-  td{
-text-align:center;
-  }
-  }
+    padding:7px 7px 7px 7px;
+    background-color: #9f9b90;
+    color:white;
+    width: 50px;
+}
+td{
+  text-align:center;
+}
+}
 }
 
 #linknew{
@@ -174,4 +206,35 @@ float: right;
 padding-left: 4px;
   background-color: #d1d1cf;
   border-left: 6px solid @lightBlue;
+}
+
+div.post{
+  margin: 10px auto;
+  width: 500px;
+  border: 2px solid #eee;
+  background-color: #ddd;
+  padding: 15px;
+  h4{
+    margin: 5px;
+    font-size: 20px;
+  }
+ .weight{
+    display: inline-block;
+    float: right;
+    font-family: "MyriadproBC";
+    font-size: 60px;
+    padding: 5px;
+}
+  p{
+    margin: 5px;
+    color: #444;
+  }
+}
+
+div.post:hover{
+  background-color: @lightBlue;
+  color: #fff;
+  p{
+    color: #eee;
+  }
 }
