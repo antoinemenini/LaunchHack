@@ -1,40 +1,41 @@
+<div class="content">
+  <%= render 'searchForm' %>
 
-<%= render 'searchForm' %>
 
 
+  <h1>Listing flights</h1>
 
-<h1>Listing flights</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Airline</th>
-      <th>Departuretime</th>
-      <th>Flightnumber</th>
-      <th>Departureairport</th>
-      <th>Arrivalairport</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody id="flightsList">
-    <% @flights.each do |flight| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= flight.airline %></td>
-        <td><%= flight.departuretime %></td>
-        <td><%= flight.flightnumber %></td>
-        <td><%= flight.departureairport %></td>
-        <td><%= flight.arrivalairport %></td>
-        <td><%= link_to 'Show', flight %></td>
-        <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
-        <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Airline</th>
+        <th>Departuretime</th>
+        <th>Flightnumber</th>
+        <th>Departureairport</th>
+        <th>Arrivalairport</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody id="flightsList">
+      <% @flights.each do |flight| %>
+        <tr>
+          <td><%= flight.airline %></td>
+          <td><%= flight.departuretime %></td>
+          <td><%= flight.flightnumber %></td>
+          <td><%= flight.departureairport %></td>
+          <td><%= flight.arrivalairport %></td>
+          <td><%= link_to 'Show', flight %></td>
+          <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
+          <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Flight', new_flight_path %>
+  <br>
+
+  <%= link_to 'New Flight', new_flight_path %>
+</div>

@@ -1,11 +1,13 @@
-<h1><%= link_to 'image_tag("logo1.png")', "/" %></h1> 
+<div class="wrapper">
+<%= link_to image_tag("logo1.png"), "/" %> 
 <span class="align-right">
   <% if signed_in? %>
-    <%= link_to "My Profile", current_user, class: "link" %>
-    <%= link_to "Settings", edit_user_path(current_user), class: "link" %>
-    <%= link_to 'Sign out', signout_path, method: 'delete' %>
+    <%= link_to raw('<i class="fa fa-user"></i> My Profile'), current_user, class: "btn btn-blue" %>
+    <%= link_to raw('<i class="fa fa-cog"></i> Settings'), edit_user_path(current_user), class: "btn btn-blue" %>
+    <%= link_to raw('<i class="fa fa-sign-out"></i> Sign out'), signout_path, method: 'delete', class: "btn btn-orange" %>
   <% else %> 
-    <%= link_to ' Sign up', signup_path %>
-    <%= link_to 'Sign In', signin_path %>
+    <%= link_to raw('<i class="fa fa-pencil"></i> Sign up'), signup_path, class: "btn btn-orange" %>
+    <%= link_to raw('<i class="fa fa-user"></i> Sign In'), signin_path, class: "btn btn-orange" %>
   <% end %>
 </span>
+</div>

@@ -1,0 +1,79 @@
+.btn{
+  font-size: 16px;
+  border : 0px;
+  padding : 7px 15px;
+  text-align: center;
+  cursor : pointer;
+  display: inline-block;
+  text-decoration: none;
+  margin : 5px;
+}
+
+.btn-big{
+  font-size: 30px;
+  border : 0px;
+  padding : 14px 30px;
+  text-align: center;
+  cursor : pointer;
+  display: inline-block;
+  text-decoration: none;
+  margin : 5px;
+}
+
+.btn-orange{
+  background-color: @darkOrange;
+  color: #fff;
+}
+
+.btn-blue{
+  background-color: @lightBlue;
+  color: #fff;
+}
+
+input[type=text], input[type=password]{
+  border : 1px solid darken(#eeeeee, 15%);
+  font-size: 13px;
+  font-weight: 300;
+  height : 34px;
+  .border-radius(3px);
+  padding : 0px 5px;
+  margin : 5px;
+  .placeholder(#aaaaaa);
+}
+
+textarea{
+  border : 1px solid darken(#eeeeee, 15%);
+  font-size: 13px;
+  font-weight: 300;
+  .border-radius(3px);
+  padding : 0px 5px;
+  margin : 5px;
+  .placeholder(#aaaaaa);
+}
+
+form{
+  input[type="text"], input[type="password"]{
+    width: 100%;
+}
+textarea{
+  display: block;
+  width: 100%;
+}
+}
+
+.inline-form{
+  input[type="text"], input[type="password"]{
+    display: inline-block;
+    width: 200px;
+}
+}
+
+input.big{
+  height: 40px;
+  font-size: 15px;
+  .border-radius(5px);
+}
+
+.form{
+  width : 300px;
+}

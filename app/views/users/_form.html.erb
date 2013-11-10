@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, html:{class: "form"}) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :phone %><br>
-    <%= f.number_field :phone %>
+    <%= f.text_field :phone %>
   </div>
   <div class="field">
     <%= f.label :password %><br>
@@ -33,6 +33,8 @@
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= button_tag(type: 'submit', class: "btn btn-blue") do %>
+       <i class="fa fa-pencil-square-o"></i> Edit
+     <% end %>
   </div>
 <% end %>
