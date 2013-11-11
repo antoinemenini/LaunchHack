@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here is a project from done during the Launch Hackathon
 
-Things you may want to cover:
+The problem:
+Overweight in luggage is too expensive
 
-* Ruby version
+The solution:
+Find people that take the same flight, and have extra space.
 
-* System dependencies
+Future implementation:
+- Have ID verification through a partner and passport request.
+- Have reviews of carriers.
 
-* Configuration
+If you like our project and want to share, feel free to contact us:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Antoine & Clement
 
 
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
